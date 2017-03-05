@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
 from urllib.request import Request, urlopen
+from urllib.parse import urlencode
 from sys import argv, exit
 from getopt import getopt
 from json import dumps, loads
 
 __author__  = 'nigella'
-__version__ = '0.0.1-dev'
+__version__ = '0.0.2-dev'
 
 SHODAN_API_KEY = ''
 UA_API_KEY     = ''
@@ -126,7 +127,7 @@ if __name__ == '__main__':
     for opt, arg in opts:
         if opt == '-h': usage()
         elif opt in ('-i', '--ip-address'): ip = arg
-        elif opt in ('-u', '--user-agent'): ua = arg
+        elif opt in ('-u', '--user-agent'): ua = urlencode({"Agent": arg}).split('Agent=')[1]
 
     try:
         if opt: ''

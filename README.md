@@ -20,7 +20,7 @@ $ python(3) cylma.py <options>
 
 ##### Input
 ```
-$ python cylma.py -i 8.8.8.8 -u Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F56.0.2924.87%20Safari%2F537.36%20OPR%2F43.0.2442.1144
+$ python cylma.py -i 8.8.8.8 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
 ```
 
 ##### Output
@@ -30,7 +30,7 @@ $ python cylma.py -i 8.8.8.8 -u Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%
 ### TODOs
 
 - [ ] Make user-friendly output on terminal
-- [ ] Make URL encoding support for User-Agents
+- [x] ~~Make URL encoding support for User-Agents~~
 - [ ] Make multi-threaded
 - [ ] Add self-documentation
 - [ ] Test in Linux (Debian & Arch) systems
