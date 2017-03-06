@@ -38,7 +38,7 @@ $ python cylma.py -i 8.8.8.8 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple
 ### TODOs
 
 - [x] ~~Make URL encoding support for User-Agents~~
-- [x] Add unit-tests
+- [x] ~~Add unit-tests~~
 - [ ] Make user-friendly output on terminal
 - [ ] Make multi-threaded
 - [ ] Add self-documentation
