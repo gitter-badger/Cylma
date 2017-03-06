@@ -16,6 +16,14 @@ $ python(3) cylma.py <options>
 ```
 ###### Don't forget to change Shodan & User-Agent API keys
 
+
+### Testing
+
+```
+cd tests/ && pytest -vv
+```
+
+
 ### Example
 
 ##### Input
@@ -30,7 +38,7 @@ $ python cylma.py -i 8.8.8.8 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple
 ### TODOs
 
 - [x] ~~Make URL encoding support for User-Agents~~
-- [ ] Add unit-tests
+- [x] Add unit-tests
 - [ ] Make user-friendly output on terminal
 - [ ] Make multi-threaded
 - [ ] Add self-documentation

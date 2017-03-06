@@ -7,7 +7,7 @@ from getopt import getopt
 from json import dumps, loads
 
 __author__  = 'nigella'
-__version__ = '0.0.2-dev'
+__version__ = '0.0.3-dev'
 
 SHODAN_API_KEY = ''
 UA_API_KEY     = ''
@@ -139,7 +139,7 @@ if __name__ == '__main__':
     except: ip_data, shodan_data = None, 'None'
 
     try: ua_analysis(ua)
-    except: ua_report = None
+    except: ua_data = None
 
     create_json(ip_data=ip_data, shodan_data=shodan_data, ua_data=ua_data) # Create final JSON data
 
