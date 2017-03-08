@@ -7,7 +7,7 @@ from getopt import getopt
 from json import dumps, loads
 
 __author__  = 'nigella'
-__version__ = '0.0.3-dev'
+__version__ = '0.0.4-dev'
 
 SHODAN_API_KEY = ''
 UA_API_KEY     = ''
@@ -116,6 +116,31 @@ def ua_analysis(ua):
     )
 
 
+def friendly_output():
+    ' Print friendly output '
+
+    if ip_data:
+        try:
+            print('\n\t\t\t\t\t\t\t IP DATA\n\t\t\t\t\t\t\t =======\n\n\t\t\t\t\t\t   CITY {0}\n\t\t\t\t\t\t   COUNTRY {1}\n\t\t\t\t\t\t   MOBILE {2}\n\t\t\t\t\t\t   PROXY {3}\n\t\t\t\t\t\t   REGION {4}\n\t\t\t\t\t\t   TIMEZONE {5}\n'.format(
+                ip_data['city'], ip_data['country'], ip_data['mobile'], ip_data['proxy'], ip_data['regionName'], ip_data['timezone']
+            ))
+        except: pass
+
+    if shodan_data != 'None':
+        try:
+            print('\n\t\t\t\t\t\t       SHODAN DATA\n\t\t\t\t\t\t       ===========\n\n\t\t\t\t\t\t   OS {0}\n\t\t\t\t\t\t   ISP {1}\n\t\t\t\t\t\t   POSTAL {2}\n\t\t\t\t\t\t   COORDINATES {3}, {4}\n\t\t\t\t\t\t   PORTS {5}\n'.format(
+                shodan_data['os'], shodan_data['isp'], shodan_data['postal_code'], shodan_data['longitude'], shodan_data['latitude'], "i am a port"
+            ))
+        except: pass
+
+    if ua_data:
+        try:
+            print('\n\t\t\t\t\t\t\t UA DATA\n\t\t\t\t\t\t\t =======\n\n\t\t\t\t\t\t      TYPE {0}\n\t\t\t\t\t\t      OS {1}, {2}\n\t\t\t\t\t\t      BRWSR {3}\n\t\t\t\t\t\t      VER {4}\n'.format(
+                ua_data['data']['ua_type'], ua_data['data']['os_name'], ua_data['data']['os_version'], ua_data['data']['browser_name'], ua_data['data']['browser_version']
+            ))
+        except: pass
+
+
 if __name__ == '__main__':
     ' When script is started mainly (directly) '
 
@@ -142,5 +167,6 @@ if __name__ == '__main__':
     except: ua_data = None
 
     create_json(ip_data=ip_data, shodan_data=shodan_data, ua_data=ua_data) # Create final JSON data
+    friendly_output() # Friendly output ^^
 
 else: print('Well.. You can use this script in yours but, you\'ll be suffer.') # When script is started from another one
