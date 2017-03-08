@@ -1,5 +1,7 @@
 ## Cylma
 ###### PRs are welcome!
+
+[![Join the chat at https://gitter.im/Cylma/Lobby](https://badges.gitter.im/Cylma/Lobby.svg)](https://gitter.im/Cylma/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![](https://img.shields.io/badge/Say%20Thanks!-🦉-1EAEDB.svg)](https://saythanks.io/to/nig)
 
 Cylma is a tool for information gathering from User-Agent or IP address.
