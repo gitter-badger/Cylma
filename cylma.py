@@ -135,7 +135,7 @@ def friendly_output():
 
     if ua_data:
         try:
-            print('\n\t\t\t\t\t\t\t UA DATA\n\t\t\t\t\t\t\t =======\n\n\t\t\t\t\t\t      TYPE {0}\n\t\t\t\t\t\t      OS {1}, {2}\n\t\t\t\t\t\t      BRWSR {3}\n\t\t\t\t\t\t      VER {4}\n'.format(
+            print('\n\t\t\t\t\t\t\t UA DATA\n\t\t\t\t\t\t\t =======\n\n\t\t\t\t\t\t   TYPE {0}\n\t\t\t\t\t\t   OS {1}, {2}\n\t\t\t\t\t\t   BRWSR {3}\n\t\t\t\t\t\t   VER {4}\n'.format(
                 ua_data['data']['ua_type'], ua_data['data']['os_name'], ua_data['data']['os_version'], ua_data['data']['browser_name'], ua_data['data']['browser_version']
             ))
         except: pass
